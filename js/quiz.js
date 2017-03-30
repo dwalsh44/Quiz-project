@@ -1,3 +1,4 @@
+// these are the questions for the quiz
 var questions = [
 ['How many moons does Earth have?',1],
 ['What is the capital of Italy?','rome'],
