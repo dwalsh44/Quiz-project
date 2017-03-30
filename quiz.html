@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> A simple Javascript quiz</title>
+</head>
+<body>
+<p> A simple Javascript quiz</p>
+<script src="js/quiz.js"></script>
+<script>
+
+var score = 0;
+
+function askQuestion(question) {
+var answer = prompt(question[0],'');
+//If its not a number then change to all lower case 
+if (isNaN(answer))
+	answer = answer.toLowerCase();
+
+if(answer == question[1]) {
+alert('Correct!');
+score++;
+} else {
+	alert('Sorry. The correct answer is ' + question[1]);
+}
+}
+for (var i=0; i<questions.length; i++) {
+askQuestion(questions[i]);
+}
+var message= 'You got ' + score;
+message += ' out of ' + questions.length;
+message += 'questions correct.';
+document.write('<p>' + message + '</p>');
+
+</script>
+</body>
+
+</html>
